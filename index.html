@@ -5,11 +5,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#F6F4EF">
-<title>КУРС КВ 35 діб</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<title>КУРС КВ 35 діб · 158 навчальний центр</title>
+<meta name="description" content="КУРС КВ 35 діб — курс командирів відділень. 158 навчальний центр. Лекції з озвучкою, тести, іспит. Працює офлайн.">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="КУРС КВ">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
 <style>
+@font-face{font-family:'Golos Text';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/golos-cyrillic-400.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;}
+@font-face{font-family:'Golos Text';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/golos-cyrillic-500.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;}
+@font-face{font-family:'Golos Text';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/golos-cyrillic-600.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;}
+@font-face{font-family:'Golos Text';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/golos-cyrillic-700.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;}
+@font-face{font-family:'Golos Text';font-style:normal;font-weight:800;font-display:swap;src:url(fonts/golos-cyrillic-800.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;}
+@font-face{font-family:'Golos Text';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/golos-latin-400.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Golos Text';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/golos-latin-500.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Golos Text';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/golos-latin-600.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Golos Text';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/golos-latin-700.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Golos Text';font-style:normal;font-weight:800;font-display:swap;src:url(fonts/golos-latin-800.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
 :root{
   --bg:#F6F4EF;--paper:#FFFFFF;--soft:#EFECE4;--ink:#18212F;--muted:#5B6575;--line:#E2DDD2;
   --acc:#1F4E8C;--acc-soft:#E6EDF7;--onacc:#FFFFFF;
@@ -45,11 +60,42 @@ button:focus-visible,a:focus-visible,[tabindex]:focus-visible{outline:3px solid 
 .ib:hover{background:var(--soft);color:var(--ink)}
 .ib svg{width:22px;height:22px}
 
+.ib.dl{position:relative}
+.ib.dl .dot{position:absolute;top:8px;right:8px;width:9px;height:9px;border-radius:50%;background:var(--hl-bar);display:none}
+.ib.dl.need .dot{display:block}
+.ib.dl.ok{color:var(--ok)}
+/* offline card */
+.off{margin:18px 0 0;background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:18px;box-shadow:var(--shadow);display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.off .oi{width:52px;height:52px;border-radius:14px;background:var(--acc-soft);color:var(--acc);display:grid;place-items:center;flex:none}
+.off .oi svg{width:28px;height:28px}
+.off .ot{flex:1;min-width:220px}
+.off .ot b{display:block;font-size:18px;line-height:1.3}
+.off .ot span{font-size:14px;color:var(--muted)}
+.off .oa{display:flex;gap:8px;flex-wrap:wrap}
+.off.done .oi{background:var(--okbg);color:var(--ok)}
+.pbar{height:8px;border-radius:99px;background:var(--soft);overflow:hidden;margin-top:8px}
+.pbar i{display:block;height:100%;width:0;background:var(--acc);transition:width .2s}
+/* modal */
+.mback{position:fixed;inset:0;z-index:50;background:rgba(10,14,22,.55);display:flex;align-items:flex-end;justify-content:center;padding:16px;animation:fadeIn .15s}
+@media (min-width:640px){.mback{align-items:center}}
+.modal{background:var(--paper);color:var(--ink);border-radius:24px;max-width:460px;width:100%;padding:24px;box-shadow:0 30px 80px rgba(0,0,0,.35);max-height:90vh;overflow:auto;animation:up .2s}
+.modal h2{font-size:22px;line-height:1.25;margin-bottom:6px}
+.modal p{color:var(--muted);font-size:15px}
+.modal .qr{background:#fff;border-radius:18px;padding:16px;margin:16px auto;width:min(300px,100%)}
+.modal .qr svg{width:100%;height:auto;display:block}
+.modal .url{font-weight:600;color:var(--acc);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:center;font-size:clamp(12px,3.4vw,15px)}
+.modal .mrow{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.modal .mrow .btn{flex:1;min-width:140px}
+.modal ol{padding-left:22px;margin-top:10px;display:flex;flex-direction:column;gap:8px;font-size:16px}
+.modal .x{float:right;margin:-8px -8px 0 0}
+@keyframes fadeIn{from{opacity:0}}
+@keyframes up{from{transform:translateY(20px);opacity:.5}}
 /* home */
 .hero{padding:34px 0 8px}
 .eyebrow{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--amb)}
 .hero h1{font-size:clamp(34px,7vw,52px);line-height:1.02;font-weight:800;letter-spacing:-.02em;margin:8px 0 10px}
 .hero p{color:var(--muted);max-width:620px}
+.hero .lead{font-size:20px;font-weight:600;margin:-2px 0 10px}
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:22px 0 4px}
 .stat{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;box-shadow:var(--shadow)}
 .stat b{display:block;font-size:26px;font-weight:800;line-height:1.1;font-variant-numeric:tabular-nums}
@@ -179,8 +225,10 @@ button:focus-visible,a:focus-visible,[tabindex]:focus-visible{outline:3px solid 
 <header class="top"><div class="wrap">
   <button class="brand" id="homeBtn" aria-label="На головну">
     <span class="mark">КВ</span>
-    <span style="min-width:0"><b id="hTitle">КУРС КВ 35 діб</b><small id="hSub">Командир відділення · ВОС-100</small></span>
+    <span style="min-width:0"><b id="hTitle">КУРС КВ 35 діб</b><small id="hSub">158 навчальний центр</small></span>
   </button>
+  <button class="ib" id="qrBtn" aria-label="QR-код курсу" title="QR-код"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v.01M14 20h.01M17 20h4v-3"/></svg></button>
+  <button class="ib dl" id="dlBtn" aria-label="Завантажити для роботи офлайн" title="Офлайн"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg><i class="dot"></i></button>
   <button class="ib" id="themeBtn" aria-label="Світла або темна тема" title="Тема"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
 </div></header>
 
@@ -235,22 +283,24 @@ function route(){
 /* ---------- home ---------- */
 function renderHome(){
   S={view:"home"};$("#player").classList.add("hidden");
-  $("#hTitle").textContent="КУРС КВ 35 діб";$("#hSub").textContent="Командир відділення · ВОС-100";
+  $("#hTitle").textContent="КУРС КВ 35 діб";$("#hSub").textContent="158 навчальний центр";
   const passed=T.filter(t=>{const b=best(t.id);return b&&b.pct>=80}).length;
   const pts=T.reduce((a,t)=>a+((best(t.id)||{}).s||0),0), maxPts=T.reduce((a,t)=>a+t.test.length,0);
   const last=store.get("last",null);
   const mods=[];T.forEach(t=>{let m=mods.find(x=>x.n===t.mod);if(!m){m={n:t.mod,items:[]};mods.push(m)}m.items.push(t)});
   let html=`<div class="wrap">
   <section class="hero">
-    <div class="eyebrow">Програма підготовки командирів відділень</div>
+    <div class="eyebrow">158 навчальний центр</div>
     <h1>КУРС КВ<br>35 діб</h1>
+    <div class="lead">Курс командирів відділень</div>
     <p>Слухайте лекцію — текст іде паралельно. Потім закріпіть ключові сенси тестом. Тема засвоєна, коли тест складено на 80% і більше.</p>
+    <div class="cta">${last&&byId[last]?`<button class="btn p" data-go="#${last}">${icon("play")} Продовжити: ${esc(byId[last].short)}</button>`:`<button class="btn p" data-go="#${T[0].id}">${icon("play")} Почати з першої теми</button>`}</div>
+    <div id="offCard"></div>
     <div class="stats">
       <div class="stat"><b>${passed}/${T.length}</b><span>тем засвоєно</span></div>
       <div class="stat"><b>${pts}</b><span>балів з ${maxPts}</span></div>
       <div class="stat"><b>${(store.get("exam",null)||{}).pct??"—"}${store.get("exam",null)?"%":""}</b><span>підсумковий іспит</span></div>
     </div>
-    <div class="cta">${last&&byId[last]?`<button class="btn p" data-go="#${last}">${icon("play")} Продовжити: ${esc(byId[last].short)}</button>`:`<button class="btn p" data-go="#${T[0].id}">${icon("play")} Почати з першої теми</button>`}</div>
   </section>`;
   let n=0;
   mods.forEach(m=>{
@@ -262,8 +312,8 @@ function renderHome(){
     html+=`</div>`;
   });
   html+=`<div class="exam"><div><b>Підсумковий іспит</b><span>40 випадкових питань з усіх ${T.length} тем. Без підказок до кінця — як на контрольному занятті.</span></div><button class="btn" data-go="#exam">Скласти іспит</button></div>
-  <footer class="foot"><span>${DEV}</span><span>За Програмою об’єднаної (суміщеної) підготовки командирів відділень за ВОС-100, 2026</span></footer></div>`;
-  $("#view").innerHTML=html;bindGo();
+  <footer class="foot"><span>158 навчальний центр · ${DEV} · TO BE PRODUCTION</span><span>За Програмою об’єднаної (суміщеної) підготовки командирів відділень за ВОС-100, 2026</span></footer></div>`;
+  $("#view").innerHTML=html;bindGo();renderOff();
 }
 function bindGo(){document.querySelectorAll("[data-go]").forEach(b=>b.onclick=()=>go(b.dataset.go))}
 function icon(n){return {play:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>',
@@ -277,7 +327,7 @@ function openTopic(id,tab){
   S.tab=tab;
   $("#hTitle").textContent=t.short;$("#hSub").textContent=t.mod;
   const idx=T.indexOf(t)+1;
-  let html=`<div class="wrap"><div class="thead"><span class="eyebrow">Тема ${idx} з ${T.length}</span><h1>${esc(t.title)}</h1><p>Програма: ${esc(t.src)}</p></div>
+  let html=`<div class="wrap"><div class="thead"><span class="eyebrow">Тема ${idx} / ${T.length}</span><h1>${esc(t.title)}</h1><p>Програма: ${esc(t.src)}</p></div>
   <div class="tabs" role="tablist"><button class="tab ${tab==="lec"?"on":""}" data-go="#${id}">Лекція · ${mins(id)} хв</button><button class="tab ${tab==="test"?"on":""}" data-go="#${id}/test">Тест · ${t.test.length} питань</button></div>`;
   if(tab==="lec"){
     html+=`<article class="lec">`;
@@ -454,6 +504,125 @@ addEventListener("keydown",e=>{
   }
   if(e.key==="Escape")go("#");
 });
+/* ---------- офлайн, встановлення, QR ---------- */
+const ASSETS = [["./", 355466], ["index.html", 355466], ["manifest.webmanifest", 766], ["icons/icon-192.png", 6471], ["icons/icon-512.png", 8888], ["icons/apple-touch-icon.png", 5944], ["fonts/golos-cyrillic-400.woff2", 6960], ["fonts/golos-cyrillic-500.woff2", 7044], ["fonts/golos-cyrillic-600.woff2", 7140], ["fonts/golos-cyrillic-700.woff2", 7108], ["fonts/golos-cyrillic-800.woff2", 7268], ["fonts/golos-latin-400.woff2", 11992], ["fonts/golos-latin-500.woff2", 12032], ["fonts/golos-latin-600.woff2", 12300], ["fonts/golos-latin-700.woff2", 12380], ["fonts/golos-latin-800.woff2", 12668], ["audio/t01_00.mp3", 408521], ["audio/t01_01.mp3", 337833], ["audio/t01_02.mp3", 290343], ["audio/t01_03.mp3", 333758], ["audio/t01_04.mp3", 362284], ["audio/t01_05.mp3", 378898], ["audio/t02_00.mp3", 255861], ["audio/t02_01.mp3", 203668], ["audio/t02_02.mp3", 499270], ["audio/t02_03.mp3", 142072], ["audio/t02_04.mp3", 311032], ["audio/t02_05.mp3", 282036], ["audio/t02_06.mp3", 348648], ["audio/t02_07.mp3", 346140], ["audio/t03_00.mp3", 273729], ["audio/t03_01.mp3", 224984], ["audio/t03_02.mp3", 226708], ["audio/t03_03.mp3", 135175], ["audio/t03_04.mp3", 512906], ["audio/t03_05.mp3", 377644], ["audio/t03_06.mp3", 328743], ["audio/t03_07.mp3", 274983], ["audio/t04_00.mp3", 242225], ["audio/t04_01.mp3", 155551], ["audio/t04_02.mp3", 222477], ["audio/t04_03.mp3", 333601], ["audio/t04_04.mp3", 309778], ["audio/t04_05.mp3", 227335], ["audio/t04_06.mp3", 272318], ["audio/t05_00.mp3", 268870], ["audio/t05_01.mp3", 213699], ["audio/t05_02.mp3", 382816], ["audio/t05_03.mp3", 126712], ["audio/t05_04.mp3", 354290], ["audio/t05_05.mp3", 205079], ["audio/t05_06.mp3", 191913], ["audio/t06_00.mp3", 333915], ["audio/t06_01.mp3", 288305], ["audio/t06_02.mp3", 378741], ["audio/t06_03.mp3", 374666], ["audio/t06_04.mp3", 450996], ["audio/t06_05.mp3", 292537], ["audio/t07_00.mp3", 111979], ["audio/t07_01.mp3", 300844], ["audio/t07_02.mp3", 269027], ["audio/t07_03.mp3", 381562], ["audio/t07_04.mp3", 451779], ["audio/t07_05.mp3", 171224], ["audio/t07_06.mp3", 373099], ["audio/t08_00.mp3", 223574], ["audio/t08_01.mp3", 281252], ["audio/t08_02.mp3", 156178], ["audio/t08_03.mp3", 146460], ["audio/t08_04.mp3", 437987], ["audio/t08_05.mp3", 376547], ["audio/t08_06.mp3", 491120], ["audio/t09_00.mp3", 142072], ["audio/t09_01.mp3", 111508], ["audio/t09_02.mp3", 169657], ["audio/t09_03.mp3", 143952], ["audio/t09_04.mp3", 199750], ["audio/t09_05.mp3", 209311], ["audio/t10_00.mp3", 197399], ["audio/t10_01.mp3", 296299], ["audio/t10_02.mp3", 367770], ["audio/t10_03.mp3", 151006], ["audio/t10_04.mp3", 192070], ["audio/t10_05.mp3", 209938], ["audio/t10_06.mp3", 159626], ["audio/t11_00.mp3", 75930], ["audio/t11_01.mp3", 218088], ["audio/t11_02.mp3", 244419], ["audio/t11_03.mp3", 197712], ["audio/t11_04.mp3", 218558], ["audio/t11_05.mp3", 187681], ["audio/t12_00.mp3", 363695], ["audio/t12_01.mp3", 119659], ["audio/t12_02.mp3", 216521], ["audio/t12_03.mp3", 157275], ["audio/t12_04.mp3", 331407], ["audio/t12_05.mp3", 230157], ["audio/t12_06.mp3", 161507], ["audio/t13_00.mp3", 202258], ["audio/t13_01.mp3", 285327], ["audio/t13_02.mp3", 200063], ["audio/t13_03.mp3", 64958], ["audio/t13_04.mp3", 127339], ["audio/t13_05.mp3", 148811], ["audio/t14_00.mp3", 289716], ["audio/t14_01.mp3", 302411], ["audio/t14_02.mp3", 130473], ["audio/t14_03.mp3", 352880], ["audio/t14_04.mp3", 179375], ["audio/t14_05.mp3", 544880], ["audio/t15_00.mp3", 209781], ["audio/t15_01.mp3", 264325], ["audio/t15_02.mp3", 243479], ["audio/t15_03.mp3", 465729], ["audio/t15_04.mp3", 240501], ["audio/t15_05.mp3", 136899], ["audio/t15_06.mp3", 316204], ["audio/t15_07.mp3", 370434], ["audio/t16_00.mp3", 272945], ["audio/t16_01.mp3", 294575], ["audio/t16_02.mp3", 161507], ["audio/t16_03.mp3", 201004], ["audio/t16_04.mp3", 485321], ["audio/t16_05.mp3", 312129], ["audio/t17_00.mp3", 169657], ["audio/t17_01.mp3", 150222], ["audio/t17_02.mp3", 285170], ["audio/t17_03.mp3", 165739], ["audio/t17_04.mp3", 427015], ["audio/t17_05.mp3", 382346], ["audio/t17_06.mp3", 317928], ["audio/t18_00.mp3", 359149], ["audio/t18_01.mp3", 150535], ["audio/t18_02.mp3", 416357], ["audio/t18_03.mp3", 167933], ["audio/t18_04.mp3", 115270], ["audio/t18_05.mp3", 326392], ["audio/t18_06.mp3", 318398]];          // [[path, bytes], ...]
+const CACHE = "kv35-a1";
+const SITE = "https://yuriygrom357357-tech.github.io/kurs-kv-35/";
+const QR_SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35" shape-rendering="crispEdges"><path fill="#FFFFFF" d="M0 0h35v35H0z"/><path stroke="#18212F" d="M1 1.5h7m1 0h1m1 0h6m1 0h1m2 0h1m2 0h1m2 0h7M1 2.5h1m5 0h1m1 0h1m1 0h1m1 0h2m1 0h2m1 0h1m3 0h3m1 0h1m5 0h1M1 3.5h1m1 0h3m1 0h1m2 0h1m1 0h2m3 0h2m1 0h1m1 0h1m4 0h1m1 0h3m1 0h1M1 4.5h1m1 0h3m1 0h1m1 0h1m1 0h1m3 0h1m1 0h1m2 0h6m1 0h1m1 0h3m1 0h1M1 5.5h1m1 0h3m1 0h1m2 0h1m2 0h3m2 0h1m2 0h1m1 0h1m3 0h1m1 0h3m1 0h1M1 6.5h1m5 0h1m2 0h3m1 0h2m4 0h3m1 0h2m1 0h1m5 0h1M1 7.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M9 8.5h2m1 0h3m3 0h1m2 0h1m1 0h3M1 9.5h1m1 0h2m1 0h3m2 0h2m5 0h5m2 0h1m1 0h1m2 0h1m1 0h2M2 10.5h1m5 0h6m5 0h1m1 0h1m1 0h2m2 0h2m1 0h3M3 11.5h6m1 0h2m1 0h1m1 0h2m1 0h1m5 0h3m1 0h3m1 0h1M3 12.5h1m2 0h1m1 0h3m3 0h2m1 0h1m1 0h5m4 0h1m1 0h1M1 13.5h1m3 0h1m1 0h2m1 0h4m2 0h1m2 0h1m4 0h1m2 0h1m1 0h2M2 14.5h1m1 0h1m4 0h3m1 0h2m2 0h1m1 0h1m3 0h1m5 0h1m2 0h1M4 15.5h5m1 0h1m3 0h1m1 0h2m1 0h1m2 0h3m2 0h1m1 0h2M1 16.5h1m3 0h2m2 0h1m1 0h1m1 0h1m1 0h1m1 0h6m3 0h2m1 0h1M6 17.5h2m2 0h1m1 0h2m2 0h1m3 0h4m2 0h2m1 0h2M1 18.5h1m1 0h3m2 0h1m2 0h2m2 0h5m1 0h1m1 0h3m1 0h1m1 0h2m1 0h2M1 19.5h3m1 0h1m1 0h3m1 0h1m1 0h1m3 0h2m2 0h3m1 0h5m1 0h1m1 0h1M3 20.5h1m4 0h1m1 0h1m1 0h1m2 0h1m1 0h1m3 0h2m3 0h2m1 0h1m2 0h2M1 21.5h1m4 0h2m1 0h1m1 0h1m1 0h1m1 0h2m2 0h1m7 0h2m1 0h3M1 22.5h1m3 0h1m2 0h1m1 0h1m1 0h1m1 0h1m1 0h1m2 0h1m6 0h1m1 0h2m3 0h1M3 23.5h5m2 0h1m2 0h2m2 0h3m1 0h3m1 0h1m2 0h1m1 0h1m1 0h2M2 24.5h3m3 0h1m1 0h1m2 0h2m2 0h5m6 0h2m1 0h1M1 25.5h1m1 0h1m1 0h4m1 0h3m1 0h1m1 0h1m3 0h2m1 0h8M9 26.5h1m1 0h5m2 0h2m1 0h2m2 0h1m3 0h2m1 0h2M1 27.5h7m1 0h1m1 0h2m3 0h1m3 0h1m3 0h2m1 0h1m1 0h1m3 0h1M1 28.5h1m5 0h1m1 0h2m1 0h1m1 0h4m6 0h2m3 0h4M1 29.5h1m1 0h3m1 0h1m2 0h1m2 0h2m3 0h1m4 0h7m1 0h3M1 30.5h1m1 0h3m1 0h1m1 0h1m1 0h1m1 0h3m3 0h1m2 0h1m1 0h1m3 0h1m2 0h1M1 31.5h1m1 0h3m1 0h1m1 0h3m1 0h2m4 0h2m1 0h7m1 0h2M1 32.5h1m5 0h1m2 0h1m1 0h2m1 0h3m1 0h1m3 0h2m1 0h6m1 0h1M1 33.5h7m1 0h1m1 0h2m3 0h1m3 0h2m1 0h3m3 0h1m1 0h1"/></svg>
+`;
+const ZIP = ["kurs-kv-35-offline.zip", 32986827];                // [path, bytes] або null
+const isFile = location.protocol === "file:";
+const swOK = "serviceWorker" in navigator && !isFile;
+const ua = navigator.userAgent;
+const isIOS = /iPad|iPhone|iPod/.test(ua) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+const isStandalone = matchMedia("(display-mode: standalone)").matches || navigator.standalone === true;
+const totalMB = Math.round(ASSETS.reduce((a, x) => a + x[1], 0) / 1048576);
+let OFF = {state: isFile ? "file" : "unknown", done: 0, bytes: 0};
+let installEvt = null;
+addEventListener("beforeinstallprompt", e => {e.preventDefault(); installEvt = e; renderOff();});
+addEventListener("appinstalled", () => {installEvt = null; renderOff();});
+if (swOK) {
+  navigator.serviceWorker.register("sw.js").catch(() => {});
+  checkOffline();
+}
+async function checkOffline() {
+  try {
+    const c = await caches.open(CACHE); let miss = 0;
+    for (const [p] of ASSETS) if (!(await c.match(p))) { miss++; break; }
+    OFF.state = miss === 0 ? "ready" : (store.get("offline", false) ? "partial" : "none");
+  } catch (e) { OFF.state = "none"; }
+  renderOff();
+}
+async function downloadAll() {
+  if (!swOK) return;
+  OFF.state = "loading"; OFF.done = 0; OFF.bytes = 0; renderOff();
+  try { if (navigator.storage && navigator.storage.persist) await navigator.storage.persist(); } catch (e) {}
+  try {
+    const c = await caches.open(CACHE);
+    let i = 0;
+    const work = async () => {
+      while (i < ASSETS.length) {
+        const [p, b] = ASSETS[i++];
+        if (!(await c.match(p))) {
+          const r = await fetch(p, {cache: "reload"});
+          if (!r.ok) throw new Error(p);
+          await c.put(p, r);
+        }
+        OFF.done++; OFF.bytes += b; paintProg();
+      }
+    };
+    await Promise.all([work(), work(), work(), work()]);
+    store.set("offline", true); OFF.state = "ready";
+  } catch (e) { OFF.state = "error"; }
+  renderOff();
+  if (OFF.state === "ready" && !isStandalone) setTimeout(() => openInstall(true), 400);
+}
+function paintProg() {
+  const el = $("#offProg"); if (!el) return;
+  el.style.width = (OFF.done / ASSETS.length * 100) + "%";
+  const t = $("#offTxt"); if (t) t.textContent = `Завантажено ${Math.round(OFF.bytes / 1048576)} з ${totalMB} МБ · не закривайте сторінку`;
+}
+const ICON = {
+  dl: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>',
+  ok: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>',
+  qr: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v.01M14 20h.01M17 20h4v-3"/></svg>'
+};
+function renderOff() {
+  const b = $("#dlBtn");
+  if (b) { b.classList.toggle("ok", OFF.state === "ready" || OFF.state === "file"); b.classList.toggle("need", OFF.state === "none" || OFF.state === "partial"); }
+  const box = $("#offCard"); if (!box) return;
+  let h = "";
+  const qrb = `<button class="btn" onclick="openQR()">${ICON.qr} QR-код</button>`;
+  if (OFF.state === "file") {
+    h = `<div class="off done"><div class="oi">${ICON.ok}</div><div class="ot"><b>Офлайн-версія з флешки</b><span>Курс працює без інтернету на цьому комп’ютері.</span></div><div class="oa">${qrb}</div></div>`;
+  } else if (OFF.state === "loading") {
+    h = `<div class="off"><div class="oi">${ICON.dl}</div><div class="ot"><b>Завантаження курсу…</b><span id="offTxt">Підготовка…</span><div class="pbar"><i id="offProg"></i></div></div></div>`;
+  } else if (OFF.state === "ready") {
+    const inst = isStandalone ? "" : `<button class="btn p" onclick="openInstall()">${ICON.dl} Встановити як застосунок</button>`;
+    h = `<div class="off done"><div class="oi">${ICON.ok}</div><div class="ot"><b>Курс збережено на цьому пристрої</b><span>Лекції, озвучка і тести працюють без інтернету.</span></div><div class="oa">${inst}${qrb}</div></div>`;
+  } else if (!swOK) {
+    h = `<div class="off"><div class="oi">${ICON.dl}</div><div class="ot"><b>Офлайн-режим недоступний у цьому браузері</b><span>Відкрийте курс у Chrome, Safari або Edge.</span></div><div class="oa">${qrb}</div></div>`;
+  } else {
+    const err = OFF.state === "error" ? "Не вдалося завантажити все — перевірте інтернет і натисніть ще раз." : `Телефон, планшет або комп’ютер · ${totalMB} МБ · один раз з інтернетом`;
+    h = `<div class="off"><div class="oi">${ICON.dl}</div><div class="ot"><b>Працюйте без інтернету</b><span>${err}</span></div><div class="oa"><button class="btn p" onclick="downloadAll()">${ICON.dl} Завантажити курс</button>${qrb}</div></div>`;
+  }
+  box.innerHTML = h; paintProg();
+}
+function modal(html) {
+  closeModal();
+  const m = document.createElement("div"); m.className = "mback"; m.id = "mback";
+  m.innerHTML = `<div class="modal" role="dialog" aria-modal="true"><button class="ib x" onclick="closeModal()" aria-label="Закрити"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>${html}</div>`;
+  m.addEventListener("click", e => { if (e.target === m) closeModal(); });
+  document.body.appendChild(m);
+}
+function closeModal() { const m = $("#mback"); if (m) m.remove(); }
+function openQR() {
+  const share = navigator.share ? `<button class="btn" onclick="navigator.share({title:'КУРС КВ 35 діб',url:SITE}).catch(()=>{})">Поділитися</button>` : "";
+  modal(`<h2>Відкрити курс на телефоні</h2><p>Наведіть камеру телефону на код і торкніться посилання. Реєстрація не потрібна.</p>
+  <div class="qr">${QR_SVG}</div><div class="url">${SITE.replace("https://", "")}</div>
+  <div class="mrow"><button class="btn p" id="cpBtn" onclick="copyLink()">Скопіювати посилання</button>${share}</div>`);
+}
+function copyLink() {
+  const done = () => { const b = $("#cpBtn"); if (b) b.textContent = "Скопійовано ✓"; };
+  if (navigator.clipboard) navigator.clipboard.writeText(SITE).then(done, () => {}); else done();
+}
+function openInstall(auto) {
+  if (installEvt && auto === true) { modal(`<h2>Курс збережено ✓</h2><p>Лекції, озвучка і тести тепер працюють без інтернету. Додайте іконку курсу на екран, щоб відкривати його одним дотиком.</p><div class="mrow"><button class="btn p" onclick="closeModal();openInstall()">Встановити застосунок</button><button class="btn" onclick="closeModal()">Пізніше</button></div>`); return; }
+  if (installEvt) { installEvt.prompt(); installEvt.userChoice.finally(() => { installEvt = null; renderOff(); }); return; }
+  let steps;
+  if (isIOS) steps = `<ol><li>Натисніть <b>«Поділитися»</b> <span style="white-space:nowrap">(квадрат зі стрілкою)</span> внизу Safari.</li><li>Оберіть <b>«На екран „Додому“»</b>.</li><li>Натисніть <b>«Додати»</b> — з’явиться іконка «КУРС КВ».</li></ol>`;
+  else if (/Android/i.test(ua)) steps = `<ol><li>Натисніть меню браузера <b>⋮</b> угорі праворуч.</li><li>Оберіть <b>«Встановити застосунок»</b> або <b>«Додати на головний екран»</b>.</li><li>Підтвердіть — з’явиться іконка «КУРС КВ».</li></ol>`;
+  else steps = `<ol><li>У Chrome або Edge натисніть значок <b>встановлення</b> праворуч в адресному рядку (монітор зі стрілкою).</li><li>Підтвердіть <b>«Встановити»</b> — курс відкриватиметься окремим вікном, навіть без інтернету.</li></ol>`;
+  const zip = ZIP && !/Android|iPhone|iPad|iPod/i.test(ua) ? `<p style="margin-top:14px">Для флешки або комп’ютера без браузера Chrome — <a href="${ZIP[0]}" download style="color:var(--acc);font-weight:600">завантажити архів курсу (${Math.round(ZIP[1] / 1048576)} МБ)</a>. Розпакуйте і відкрийте index.html.</p>` : "";
+  modal(`<h2>Встановити як застосунок</h2><p>Курс уже збережено. Додайте іконку, щоб відкривати його одним дотиком — без інтернету.</p>${steps}${zip}<div class="mrow"><button class="btn p" onclick="closeModal()">Зрозуміло</button></div>`);
+}
+$("#qrBtn").onclick = openQR;
+$("#dlBtn").onclick = () => {
+  if (OFF.state === "ready") openInstall();
+  else if (OFF.state === "file") modal(`<h2>Офлайн-версія</h2><p>Ви відкрили курс з флешки або папки — він уже працює без інтернету.</p><div class="mrow"><button class="btn p" onclick="closeModal()">Добре</button></div>`);
+  else { if (S.view !== "home") go("#"); setTimeout(() => { const c = $("#offCard"); if (c) c.scrollIntoView({behavior: "smooth", block: "center"}); if (OFF.state !== "loading") downloadAll(); }, 60); }
+};
+addEventListener("keydown", e => { if (e.key === "Escape" && $("#mback")) { closeModal(); e.stopImmediatePropagation(); } }, true);
 route();
 </script>
 </body>
